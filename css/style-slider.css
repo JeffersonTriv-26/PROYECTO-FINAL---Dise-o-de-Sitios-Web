@@ -1,0 +1,121 @@
+/* ===== SECCIONES ===== */
+.seccion-slider {
+    width: 100%;
+    max-width: 2048px; /* Ancho máximo del contenido */
+    margin: auto; /* Centra el contenido */
+
+}
+
+/* ===== CARRUSEL GENERAL ===== */
+.carrusel {
+    position: relative; /* Necesario para posicionar flechas e indicadores */
+    width: 100%; /* Ocupa todo el ancho de pantalla */
+    overflow: hidden; /* Oculta lo que se sale del contenedor */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.288); /*Sombra X, Y, difuminado, color */
+
+}
+
+/* Ocultamos los inputs radio (sirven para el control de las imágenes) */
+.carrusel input {
+    display: none;
+}
+
+/* ===== CONTENEDOR DE IMÁGENES ===== */
+.contenedor-imagenes {
+    display: flex; /* Coloca las imágenes una al lado de la otra en fila */
+    width: 100%; /* Ahora usamos 100% para que no crezca más de la cuenta */
+    transition: transform 0.8s ease; /* Transición suave al cambiar de imagen */
+}
+
+/* Imágenes dentro del contenedor */
+.contenedor-imagenes img {
+    flex: 0 0 100%; /* Cada imagen ocupa el 100% del ancho del carrusel */
+    width: 100%; /* Ajusta el ancho al contenedor */
+    height: auto; /* Mantiene la proporción original */
+    object-fit: cover; /* Rellena sin deformar (recorta si es necesario) */
+}
+
+/* Cada imagen en un bloque separado */
+.imagen {
+    width: 100%; /* Cada "slide" ocupa todo el ancho */
+    flex-shrink: 0; /* No permite que se reduzca el ancho */
+}
+
+.imagen img {
+    width: 100%; /* Imagen ocupa todo el ancho de su contenedor */
+    height: auto; /* Mantiene proporción */
+    display: block; /* Elimina espacios en blanco extra */
+}
+
+/* ===== EFECTO DE CAMBIO DE IMAGEN ===== */
+/* Cuando está seleccionado img1 → desplaza a 0% */
+#img1:checked ~ .contenedor-imagenes {
+    transform: translateX(0%);
+}
+
+/* Cuando está seleccionado img2 → desplaza a la izquierda 100% */
+#img2:checked ~ .contenedor-imagenes {
+    transform: translateX(-100%);
+}
+
+/* Cuando está seleccionado img3 → desplaza a la izquierda 200% */
+#img3:checked ~ .contenedor-imagenes {
+    transform: translateX(-200%);
+}
+
+/* ================================
+    ESTILO PARA LAS FLECHAS DEL SLIDER
+================================ */
+.navegacion-flechas {
+    position: absolute; /* Coloca las flechas encima del slider */
+    top: 50%; /* Centra verticalmente */
+    width: 100%; /* Ocupar todo el ancho */
+    display: flex; /* Flexbox para repartir flechas */
+    justify-content: space-between; /* Una a la izquierda y otra a la derecha */
+    transform: translateY(-50%); /* Ajusta para centrar visualmente */
+    pointer-events: none; /* No bloquea clics en las imágenes */
+}
+
+.flecha {
+    cursor: pointer; /* Mano al pasar encima */
+    font-size: 2rem; /* Tamaño del ícono */
+    color: white; /* Color de la flecha */
+    background: rgba(0, 0, 0, 0.007); /* Fondo semi-transparente */
+    /*padding: 10px;*/ /* Espaciado interno */
+    border-radius: 50%; /* Forma circular */
+    pointer-events: auto; /* Activar clics en flechas */
+    transition: background 0.3s; /* Transición suave */
+    border: none;
+}
+
+.flecha:hover {
+    background: rgba(0,0,0,0.7); /* Fondo más oscuro al pasar el mouse */
+}
+
+/* ================================
+    ESTILO PARA LOS INDICADORES
+================================ */
+.indicadores {
+    position: absolute; /* Posiciona en relación al slider */
+    bottom: 8px; /* Un poco arriba del borde inferior */
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center; /* Centra los puntos */
+}
+
+.indicadores label {
+    cursor: pointer; /* Clickeable */
+    display: inline-block; /* Permite tamaño y forma */
+    height: 10px; /* Altura del punto */
+    width: 10px; /* Ancho del punto */
+    background: #ccc; /* Gris por defecto */
+    border-radius: 50%; /* Forma circular */
+    margin: 0 5px; /* Separación horizontal */
+    transition: background 0.3s; /* Cambio suave de color */
+}
+
+/* Puntos activos (según imagen seleccionada) */
+#img1:checked ~ .indicadores label[for="img1"],
+#img2:checked ~ .indicadores label[for="img2"],
+#img3:checked ~ .indicadores label[for="img3"] {
+    background: #333; /* Color oscuro para el activo */
+}

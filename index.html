@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica de la página -->
+    <meta charset="UTF-8"> <!-- Soporte para caracteres especiales como ñ y acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive: se adapta a móviles -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con navegadores antiguos -->
+    <title>Grupo JJ - Soporte y Reparación de Computadoras</title> <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Enlace al archivo CSS principal de estilos de la página -->
+    <link rel="stylesheet" href="css/Style-principal.css">
+
+    <!-- Enlace al CSS del slider -->
+    <link rel="stylesheet" href="css/style-slider.css">
+
+    <!-- Enlace al CSS del CONTENIDO -->
+    <link rel="stylesheet" href="css/pag-index.css">
+
+    <!-- Fuente opcional desde Google Fonts (puedes cambiarla) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Script JS del slider con autoplay -->
+    <script src="js/slider-principal.js" defer></script> <!-- "defer" para que cargue después del HTML -->
+</head>
+<body>
+
+    <!-- ===== ENCABEZADO DE LA PÁGINA ===== -->
+    <header>
+        <!-- Contenedor del logo -->
+        <div class="logo">
+            <!-- Logo de la carpeta img -->
+            <img src="img/logo grupojj-3.png" alt="Logo Grupo JJ">
+            <h1>GRUPO J&J SYSTEM</h1>
+        </div>
+
+        <!-- Menú de navegación principal -->
+        <nav>
+            <ul>
+                <!-- Enlaces de navegación -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/Servicios.html">Servicios</a></li>
+                <li><a href="pages/productos.html">Productos</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== SLIDER PRINCIPAL ===== -->
+    <section class="seccion-slider">
+        <div class="carrusel">
+
+            <!-- Inputs ocultos para controlar qué imagen se muestra -->
+            <input type="radio" name="imagen" id="img1" checked>
+            <input type="radio" name="imagen" id="img2">
+            <input type="radio" name="imagen" id="img3">
+
+            <!-- Contenedor de imágenes del slider -->
+            <div class="contenedor-imagenes">
+                <div class="imagen"><img src="img/img-slider/174715824433006.webp" alt="Reparación de computadoras"></div>
+                <div class="imagen"><img src="img/img-slider/174983532774254.webp" alt="Venta de accesorios"></div>
+                <div class="imagen"><img src="img/img-slider/175020435323417.webp" alt="Servicio técnico especializado"></div>
+            </div>
+
+            <!-- Flechas para cambiar manualmente -->
+            <div class="navegacion-flechas">
+                <!-- Flechas de navegacion -->
+            <button class="flecha izq">&#10094;</button>
+            <button class="flecha der">&#10095;</button>
+            </div>
+
+            <!-- Indicadores circulares -->
+            <div class="indicadores">
+                <label for="img1"></label>
+                <label for="img2"></label>
+                <label for="img3"></label>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main>
+        <section class="Contenido-Principal">
+            <h1>Bienvenido a Grupo JJ</h1>
+            <p>
+                Somos especialistas en soporte y reparación de computadoras, venta de accesorios y repuestos al por mayor y menor.
+                Ofrecemos un servicio confiable y rápido, con garantía de calidad en todos nuestros trabajos.
+            </p>
+        </section>
+    </main>
+
+    <section class="servicios">
+        <div class="tarjeta">
+            <h3>💻 Reparación de computadoras</h3>
+            <p>Diagnóstico, mantenimiento y reparación de todo tipo de equipos de escritorio y portátiles.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>🔌 Venta de accesorios</h3>
+            <p>Gran variedad de cables, cargadores, teclados, ratones y más para tus dispositivos.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>🛠️ Servicio técnico especializado</h3>
+            <p>Instalación de software, configuración de redes y optimización de sistemas.</p>
+        </div>
+    </section>
+
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer>
+        <p>&copy; 2025 Grupo JJ - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>

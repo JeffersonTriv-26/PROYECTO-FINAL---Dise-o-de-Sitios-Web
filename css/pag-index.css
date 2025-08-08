@@ -1,0 +1,115 @@
+    /* ======== SECCIÓN DE SERVICIOS INDEX ======== */
+    .servicios {
+        display: flex; /* Activa Flexbox: los hijos (.tarjeta) se colocan en una fila por defecto.
+                        Ventaja: control fácil de alineación y distribución. */
+
+        gap: 20px; /* Espacio fijo entre cada tarjeta. Es equivalente a margen entre elementos
+                    pero más limpio que asignar márgenes manualmente. */
+
+        justify-content: center; /* Centra las tarjetas horizontalmente dentro del contenedor .servicios.
+                                    Si hay poco contenido, permanecerán centradas. */
+
+        flex-wrap: wrap; /* Permite que las tarjetas "salten" a la siguiente línea cuando no caben
+                        en una sola fila (útil para pantallas pequeñas). */
+
+        padding: 40px 20px; /* Espaciado interno del contenedor:
+                            - 40px arriba y abajo
+                            - 20px a los lados
+                            Esto crea separación entre el borde del sitio y las tarjetas. */
+
+        background-color: #f8f9fa; /* Fondo muy claro para diferenciar visualmente esta sección
+                                    del resto de la página. */
+    }
+
+    /* ======== TARJETAS ======== */
+    .tarjeta {
+        background: #fff; /* Fondo blanco: contrasta con el fondo de la sección. */
+
+        border-radius: 12px; /* Bordes redondeados para una apariencia moderna y suave.
+                            Valor en px: 12px = radio medio; puedes ajustar a 8px/16px según el estilo. */
+
+        padding: 20px; /* Espacio interno entre el borde de la tarjeta y su contenido (texto, icono). */
+
+        width: 300px; /* Ancho fijo de la tarjeta en pantallas medianas/grandes.
+                        NOTA: en móviles esto podría ocupar mucho; si quieres mejor responsividad,
+                        usar `max-width: 300px; width: 100%;` para que en móvil se adapte.
+                        Ejemplo:
+                        width: 100%;
+                        max-width: 300px; */
+
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra suave:
+                                                - 0   => desplazamiento horizontal
+                                                - 4px => desplazamiento vertical (la sombra "cae" hacia abajo)
+                                                - 15px => blur (qué tanto se difumina la sombra)
+                                                - rgba(0,0,0,0.1) => color negro con 10% de opacidad
+                                                Resultado: tarjeta "elevada" sutilmente. */
+
+        text-align: center; /* Centra texto y elementos inline (títulos, párrafos, iconos) dentro de la tarjeta. */
+
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave al cambiar transform o box-shadow:
+                                                                - 0.3s: duración de la animación
+                                                                - ease: tipo de interpolación (inicio/fin suave)
+                                                                Importante para que el hover sea fluido. */
+    }
+
+    /* Título dentro de la tarjeta */
+    .tarjeta h3 {
+        font-size: 1.2rem; /* Tamaño relativo: 1.2rem = 1.2 veces la font-size raíz.
+                            Usar rem ayuda a mantener proporción con ajustes de tamaño del usuario. */
+
+        margin-bottom: 10px; /* Separación entre el título y el párrafo siguiente. */
+    }
+
+    /* Párrafo dentro de la tarjeta */
+    .tarjeta p {
+        font-size: 0.95rem; /* ligeramente más pequeño que 1rem para buena jerarquía visual */
+        color: #555;        /* gris medio para menos contraste que el negro puro (menos "pesado") */
+    }
+
+    /* Efecto al pasar el mouse sobre la tarjeta (hover) */
+    .tarjeta:hover {
+        transform: translateY(-5px); /* Mueve la tarjeta 5px hacia arriba.
+                                    Usamos transform en vez de margin-top para mejores animaciones
+                                    y para aprovechar aceleración por GPU en muchos navegadores. */
+
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Aumenta la sombra: parece que la tarjeta se "eleva" más. */
+    }
+
+    /* ===========================
+    RECOMENDACIONES Y ACCESIBILIDAD
+    =========================== */
+
+    /* 1) Hacer las tarjetas accesibles por teclado:
+    Si quieres que las tarjetas reaccionen a "focus" (usuarios que navegan con teclado),
+    añade tabindex="0" al HTML: <div class="tarjeta" tabindex="0">...
+    Y luego estiliza :focus-visible como abajo. */
+    .tarjeta:focus-visible {
+        outline: 3px solid rgba(29, 78, 171, 0.25); /* contorno visible para teclado */
+        outline-offset: 4px; /* separa el outline del borde para mejor legibilidad */
+    }
+
+    /* 2) Respecto a movimientos: si el usuario prefiere menos animación (ajuste del sistema),
+    respetarlo con prefers-reduced-motion. */
+    @media (prefers-reduced-motion: reduce) {
+        .tarjeta,
+        .tarjeta:hover {
+            transition: none;       /* elimina transiciones para usuarios que lo requieren */
+            transform: none;        /* evita desplazamientos bruscos si se redujo movimiento */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* mantener sombra base pero sin animación */
+        }
+    }
+
+    /* 3) Mejora responsive rápida (opcional pero recomendada):
+    que las tarjetas ocupen el ancho completo en pantallas pequeñas. */
+    @media (max-width: 768px) {
+        .tarjeta {
+            width: 100%;        /* ocupa todo el ancho del contenedor */
+            max-width: 420px;   /* opcional: evita que una tarjeta sea demasiado ancha en tablets */
+            margin: 0 auto;     /* centra cada tarjeta cuando haya una sola por fila */
+        }
+
+        .servicios {
+            padding: 30px 12px; /* reduce padding para móviles */
+            gap: 16px;          /* espacio ligeramente menor en móviles */
+        }
+    }

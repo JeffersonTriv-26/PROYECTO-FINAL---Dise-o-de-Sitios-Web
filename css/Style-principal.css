@@ -1,0 +1,77 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+    font-family: Arial, sans-serif; /* Fuente general de la página */
+    margin: 0; /* Quitamos márgenes por defecto */
+    padding: 0; /* Quitamos relleno por defecto */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+}
+
+/* ===== ENCABEZADO ===== */
+header {
+    background: #1e3d58; /* Color de fondo azul oscuro */
+    color: white; /* Texto en blanco */
+    padding: 10px 0; /* Espaciado interno arriba y abajo */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+header img {
+    width: 120px; /* Tamaño del logo */
+    display: block; /* Para que el logo se comporte como bloque */
+    margin: auto; /* Centra el logo en el contenedor */
+}
+
+nav ul {
+    list-style: none; /* Quitamos los puntos de lista */
+    padding: 0; /* Quitamos espacio interno */
+}
+
+nav ul li {
+    display: inline; /* Mostramos los elementos en una sola línea */
+    margin: 0 15px; /* Separación horizontal entre los enlaces */
+}
+
+nav ul li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Quitamos el subrayado */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s; /* Transición suave de color al pasar el mouse */
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Cambia a color dorado cuando pasamos el mouse */
+}
+
+/* ===== SECCIONES ===== */
+main{
+    width: 100%;
+    margin: auto;
+}
+.Contenido-Principal {
+    width: 90%;
+    /* background-color: #1e582c; */
+    padding: 20px; /* Espaciado interno */
+    margin: auto;
+}
+
+
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+    background: #1e3d58; /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* ===== RESPONSIVE (para pantallas pequeñas) ===== */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Los enlaces se apilan en columna */
+        margin: 5px 0; /* Separación vertical */
+    }
+
+    .galeria img, .productos img {
+        width: 100%; /* Imágenes ocupan todo el ancho disponible */
+        max-width: 300px; /* Máximo 300px de ancho */
+    }
+}

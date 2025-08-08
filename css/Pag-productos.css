@@ -1,0 +1,16 @@
+/* ===== GALERÍA / PRODUCTOS ===== */
+.galeria, .productos {
+    display: flex; /* display:flex coloca los elementos en fila por defecto */
+    flex-wrap: wrap; /* Si no caben, pasan a la siguiente línea */
+    gap: 15px; /* Espacio entre elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.galeria img, .productos img {
+    width: 200px; /* Tamaño de las imágenes */
+    transition: transform 0.3s; /* Efecto suave al escalar */
+}
+
+.galeria img:hover, .productos img:hover {
+    transform: scale(1.05); /* Escala la imagen un 5% al pasar el mouse */
+}

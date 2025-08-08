@@ -1,0 +1,24 @@
+/* ===== FORMULARIO ===== */
+form {
+    display: flex; /* Organiza los campos del formulario en columna */
+    flex-direction: column; /* Coloca los elementos uno debajo del otro */
+    gap: 10px; /* Espacio entre campos */
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: auto; /* Centrado del formulario */
+}
+
+input, textarea {
+    padding: 8px; /* Espaciado interno en los campos */
+    border: 1px solid #ccc; /* Borde gris claro */
+}
+
+input[type="submit"] {
+    background: #1e3d58; /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+    cursor: pointer; /* Aparece la mano al pasar el mouse */
+    border: none; /* Sin borde */
+}
+
+input[type="submit"]:hover {
+    background: #f39c12; /* Cambia a dorado al pasar el mouse */
+}
