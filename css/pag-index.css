@@ -34,13 +34,7 @@
 
     .imagen-tarjeta{
         max-width: 300px;
-<<<<<<< HEAD
         min-width: 200px ;
-=======
-        min-width: 15px;
-        /* height: 200px; */
-        /* padding: 20px; */
->>>>>>> 3c6d0b62341bde35ea1ec25af3f88b54f5185acc
         margin: auto;
     }
     .imagen-tarjeta img{
