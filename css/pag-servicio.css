@@ -1,0 +1,83 @@
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.Contenido-servicios {
+    padding: 15px 20px; /* Espaciado interno */
+    background-color: #f8f9fa; /* Fondo claro */
+}
+
+/* ===== CAJA DE DETALLES ===== */
+.Servicio-Detalles {
+    max-width: 1200px; /* Ancho máximo del bloque */
+    margin: 0 auto; /* Centrar en la pantalla */
+    padding: 10px; /* Espaciado interno */
+}
+.Servicio-Detalles h2 {
+    font-size: 3rem; /* Tamaño del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    text-align: center; /* Centrar el título */
+    color: #333; /* Color del texto */
+}
+
+/* ===== BLOQUE DE SERVICIO ===== */
+.Servicio-Item {
+    display: flex; /* Coloca texto e imagen en columnas */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Espacio entre columnas */
+    margin-bottom: 40px; /* Separación entre servicios */
+}
+
+/* Columna izquierda (texto) */
+.Servicio-Texto {
+    text-align: center;
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+.Servicio-Texto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.Servicio-Texto p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Botón/Enlace */
+.Servicio-Texto a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #075e54; /* Azul */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.Servicio-Texto a:hover {
+    background-color: #0c9484; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Columna (imagen) */
+.Servicio-Imagen {
+    width: 50%; /* Ancho fijo para la imagen */
+    text-align: center; /* Centra la imagen */
+}
+
+.Servicio-Imagen img {
+    width: 100%;
+    max-width: 2048px; /* Imagen adaptable */
+    border-radius: 10px; /* Esquinas redondeadas */
+    display: block;
+}
+
+/* ===== RESPONSIVE: EN MÓVILES UNA SOLA COLUMNA ===== */
+@media (max-width: 768px) {
+    .Servicio-Item {
+        flex-direction: column; /* Cambia a una sola columna */
+        text-align: center; /* Centra el texto */
+    }
+
+    .Servicio-Imagen {
+        margin-top: 20px; /* Espacio arriba de la imagen */
+    }
+}
