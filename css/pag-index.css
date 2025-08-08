@@ -33,7 +33,8 @@
                                                             }
 
     .imagen-tarjeta{
-        max-width: 280px;
+        max-width: 300px;
+        min-width: 15px;
         /* height: 200px; */
         /* padding: 20px; */
         margin: auto;
@@ -67,7 +68,7 @@
         font-size: 0.9rem;
         transition: background-color 0.3s ease;
     }
-    
+
     button a {
     color: inherit;       /* Usa el color del botón */
     text-decoration: none; /* Quita subrayado */
