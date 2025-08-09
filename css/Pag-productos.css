@@ -16,3 +16,40 @@
 .productos img:hover {
     transform: scale(1.05); /* Escala la imagen un 5% al pasar el mouse */
 }
+
+
+/* ----------------------
+Productos nuevos
+---------------------- */
+
+.Contenedor-Nuevos-Productos {
+    padding: 20px;
+    background-color: #13a81f; /* Fondo claro para destacar los productos nuevos */
+}
+
+.Contenedor-Nuevos-Productos h2 {
+    max-width: 100%;
+    text-align: center; /* Centra el título */
+    font-size: 35px; /* Tamaño del texto */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.productos-nuevos {
+    width: 100%; /* Ancho completo del contenedor de productos nuevos */
+    background-color: aqua; /* Fondo claro para los productos nuevos */
+    display: flex; /* Muestra los productos en fila */
+    align-content: center; /* Centra los productos verticalmente */
+    justify-content: center; /* Centra los productos horizontalmente */
+    
+}
+
+.produc {
+    width: 300px; /* Ancho de cada producto */
+    background-color: tomato;
+}
+.img-produc {
+    width: 100%; /* Ancho completo del contenedor de la imagen */
+}
+.img-produc img {
+    width: 100%; /* Ancho completo de la imagen */
+}
