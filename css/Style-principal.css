@@ -63,6 +63,7 @@ footer {
 }
 
 /* ===== RESPONSIVE (para pantallas pequeñas) ===== */
+
 @media (max-width: 768px) {
     nav ul li {
         display: block; /* Los enlaces se apilan en columna */

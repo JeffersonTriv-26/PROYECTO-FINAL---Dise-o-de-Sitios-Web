@@ -24,7 +24,7 @@ Productos nuevos
 
 .Contenedor-Nuevos-Productos {
     padding: 20px;
-    background-color: #13a81f; /* Fondo claro para destacar los productos nuevos */
+    /*background-color: #13a81f;*/ /* Fondo claro para destacar los productos nuevos */
 }
 
 .Contenedor-Nuevos-Productos h2 {
@@ -35,21 +35,45 @@ Productos nuevos
 }
 
 .productos-nuevos {
-    width: 100%; /* Ancho completo del contenedor de productos nuevos */
-    background-color: aqua; /* Fondo claro para los productos nuevos */
-    display: flex; /* Muestra los productos en fila */
-    align-content: center; /* Centra los productos verticalmente */
-    justify-content: center; /* Centra los productos horizontalmente */
-    
+    display: flex; /* Usa flexbox para organizar los productos */
+    flex-wrap: wrap; /* Permite que los productos pasen a la siguiente línea si no caben */
+    gap: 20px; /* Espacio entre los productos */
+    justify-content: center; /* Centra los productos horizontalmente */            
 }
 
 .produc {
     width: 300px; /* Ancho de cada producto */
-    background-color: tomato;
+    border: 1px solid #ccc; /* Borde alrededor de cada producto */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 10px; /* Espacio alrededor de cada producto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efecto suave al escalar y sombra */
+    background-color: #fff; /* Fondo blanco para cada producto */
+    display: flex; /* Usa flexbox para organizar el contenido */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+
+}
+.produc h3 {
+    font-size: 20px; /* Tamaño del texto del título */
+    margin: 10px 0; /* Espacio arriba y abajo del título */
+    text-align: center; /* Centra el texto del título */
+}
+.produc p {
+    font-size: 14px; /* Tamaño del texto de la descripción */
+    margin: 0 10px 10px 10px; /* Espacio alrededor del texto de la descripción */
+    text-align: center; /* Centra el texto de la descripción */
+    flex-grow: 1; /* Permite que el párrafo crezca para ocupar espacio disponible */
 }
 .img-produc {
     width: 100%; /* Ancho completo del contenedor de la imagen */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+.img-produc a {
+    display: block; /* Hace que el enlace ocupe todo el contenedor */
 }
 .img-produc img {
-    width: 100%; /* Ancho completo de la imagen */
+    height: 70px; /* Mantiene la proporción de la imagen */
+    transition: transform 0.3s; /* Efecto suave al escalar */
 }
