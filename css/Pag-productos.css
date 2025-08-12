@@ -23,8 +23,12 @@ Productos nuevos
 ---------------------- */
 
 .Contenedor-Nuevos-Productos {
-    padding: 20px;
-    /*background-color: #13a81f;*/ /* Fondo claro para destacar los productos nuevos */
+    width: 100%; /* Ancho completo del contenedor */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    background-color: #f9f9f9; /* Fondo claro para el contenedor */
+    display: flex; /* Usa flexbox para organizar los productos */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
 }
 
 .Contenedor-Nuevos-Productos h2 {
