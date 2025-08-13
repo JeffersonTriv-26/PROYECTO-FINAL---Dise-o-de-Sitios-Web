@@ -27,6 +27,18 @@
     text-align: center; /*centrar el texto del producto*/
     padding: 20px; /*espacio interno del producto*/
 }
+
+.Item-producto:hover  {
+    transform: scale(1.05); /*efecto de zoom al pasar el mouse*/
+    transition: transform 0.3s ease; /*transición suave del efecto de zoom*/
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /*sombra más intensa al pasar el mouse*/
+    cursor: pointer; /*cambiar el cursor al pasar el mouse*/
+}
+.Item-producto:hover a {
+    background-color: #25507e; /* nuevo color al hacer hover en toda la caja */
+    transition: background-color 0.3s ease, color 0.3s ease; /* animación suave */
+}
+
 .Item-producto img {
     width: 100%; /*ancho de la imagen del producto*/
     height: 170px; /*altura automática para mantener la proporción*/
@@ -62,14 +74,12 @@
     }
 
     .Item-producto {
-        width: 40%; /* ocupar casi todo el ancho disponible */
-        padding: 15px; /* reducir padding */
+        width: 70%; /* ocupar casi todo el ancho disponible */
     }
 
     .Item-producto img {
-        height: auto; /* mantener proporción */
-        max-height: 200px; /* limitar la altura si es necesario */
-    }
+        width: 330px; /* ancho fijo para imágenes en móviles */
+        height: auto; /* mantener proporción */}
 
     .Item-producto h3 {
         height: auto; /* permitir más líneas si es necesario */
@@ -85,12 +95,20 @@
         font-size: 28px; /* reducir tamaño del título */
     }
 }
-
+/* ===== RESPONSIVE (pantallas menores a 480px) ===== */
 @media (max-width: 480px){
         .Item-producto {
         width: 80%; /* ocupar casi todo el ancho disponible */
     }
     .Item-producto img {
-        width: 100%; /* mantener proporción */
+        width: 100%; /* ocupar todo el ancho disponible */
+        height: auto; /* mantener proporción */
     }
+    .Item-producto h3 {
+        height: 70px; /* permitir más líneas si es necesario */
+        text-align: center; /* mejor en móviles */
+        overflow: hidden; /*ocultar el texto que se desborda*/
+    }
+
+
 }
