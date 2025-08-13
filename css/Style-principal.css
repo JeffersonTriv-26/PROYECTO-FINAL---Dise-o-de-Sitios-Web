@@ -69,9 +69,5 @@ footer {
         display: block; /* Los enlaces se apilan en columna */
         margin: 5px 0; /* Separación vertical */
     }
-
-    .galeria img, .productos img {
-        width: 100%; /* Imágenes ocupan todo el ancho disponible */
-        max-width: 300px; /* Máximo 300px de ancho */
-    }
 }
+
