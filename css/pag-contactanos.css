@@ -1,4 +1,13 @@
 /* ===== FORMULARIO ===== */
+.section-contactos {
+    padding: 20px; /* Espaciado interno */
+}
+.section-contactos h2 {
+    text-align: center; /* Centra el título */
+    color: #1e3d58; /* Color azul oscuro */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
 form {
     display: flex; /* Organiza los campos del formulario en columna */
     flex-direction: column; /* Coloca los elementos uno debajo del otro */
