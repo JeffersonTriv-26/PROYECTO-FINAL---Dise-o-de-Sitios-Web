@@ -46,6 +46,7 @@
         </form>
     </section>
 
+    <!-- para evitar que se ingresen caracteres no permitidos en los campos de texto -->
     <script>
         // Función para permitir solo letras en el campo "nombre"
         document.getElementById('nombre').addEventListener('keypress', function (e) {
@@ -57,16 +58,17 @@
             }
         });
     </script>
+    PARA CELULAR (9 dígitos numéricos)
     <script>
-  document.getElementById('celular').addEventListener('keypress', function (e) {
-    const tecla = e.key;
-    const soloNumeros = /^[0-9]$/;
+        document.getElementById('celular').addEventListener('keypress', function (e) {
+            const tecla = e.key;
+            const soloNumeros = /^[0-9]$/;
 
-    if (!soloNumeros.test(tecla)) {
-      e.preventDefault(); // Bloquea letras u otros caracteres
-    }
-  });
-</script>
+            if (!soloNumeros.test(tecla)) {
+            e.preventDefault(); // Bloquea letras u otros caracteres
+            }
+        });
+    </script>
 
     <div class="mapa-contacto">
         <h2>Ubicación</h2>
