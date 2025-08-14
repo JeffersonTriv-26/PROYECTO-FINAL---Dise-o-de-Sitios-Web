@@ -14,6 +14,8 @@ form {
     gap: 10px; /* Espacio entre campos */
     max-width: 400px; /* Ancho máximo del formulario */
     margin: auto; /* Centrado del formulario */
+    background: #f9f9f9; /* Fondo gris claro */
+    padding: 20px; /* Espaciado interno del formulario */   
 }
 
 input, textarea {
@@ -30,4 +32,19 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background: #f39c12; /* Cambia a dorado al pasar el mouse */
+}
+
+/* ===== MAPA ===== */
+.mapa-contacto {
+    width: 70%; /* Ancho completo del contenedor */
+    height: 600px; /* Altura del mapa */
+    margin: 20px auto; /* Centrado y espacio alrededor */
+    overflow: hidden; /* Oculta el desbordamiento */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio encima del mapa */
+}
+iframe {
+    width: 100%; /* Ancho completo del iframe */
+    height: 100%; /* Altura completa del iframe */
+    border: 0; /* Sin borde */
 }

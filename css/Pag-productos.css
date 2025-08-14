@@ -45,14 +45,14 @@
     border-radius: 10px; /*bordes redondeados de la imagen*/
     margin-bottom: 15px; /*espacio debajo de la imagen*/
 }
-.Item-producto h3 {
+.Item-producto p {
     overflow: hidden; /*ocultar el texto que se desborda*/
-    height: 100px; /*altura del título del producto*/
+    height: 90px; /*altura del título del producto*/
 
-    font-size: 16px; /*tamaño de fuente del título del producto*/
-    color: rgb(0, 0, 0); /*color del texto del título del producto*/
+    font-size: 14px; /*tamaño de fuente del título del producto*/
+    color: rgb(26, 26, 26); /*color del texto del título del producto*/
     margin-bottom: 10px; /*espacio debajo del título*/
-    text-align: justify; /*alinear el texto del título del producto*/
+    text-align: center; /*alinear el texto del título del producto*/
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*fuente del título del producto*/
 }
 .Item-producto a {
