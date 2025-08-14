@@ -57,6 +57,16 @@
             }
         });
     </script>
+    <script>
+  document.getElementById('celular').addEventListener('keypress', function (e) {
+    const tecla = e.key;
+    const soloNumeros = /^[0-9]$/;
+
+    if (!soloNumeros.test(tecla)) {
+      e.preventDefault(); // Bloquea letras u otros caracteres
+    }
+  });
+</script>
 
     <div class="mapa-contacto">
         <h2>Ubicación</h2>
