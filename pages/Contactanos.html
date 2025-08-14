@@ -45,6 +45,19 @@
             <input type="submit" value="Enviar">
         </form>
     </section>
+
+    <script>
+        // Función para permitir solo letras en el campo "nombre"
+        document.getElementById('nombre').addEventListener('keypress', function (e) {
+            const tecla = e.key;
+            const letrasPermitidas = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]$/;
+
+            if (!letrasPermitidas.test(tecla)) {
+            e.preventDefault(); // Bloquea la tecla si no es letra o espacio
+            }
+        });
+    </script>
+
     <div class="mapa-contacto">
         <h2>Ubicación</h2>
         <p>Encuéntranos en nuestra tienda ubicada en Jr. Leticia 937 Int 10, Lima, Perú.</p>
